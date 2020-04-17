@@ -34,10 +34,7 @@ class Song
   end
 
   def self.find_by_name(song_name)
-    if @@all.find{|song| song.song_name == song_name}
-  else
-    self.new
-  end
+    @@all.find{|song| song.song_name == song_name}
   end
 
 end
