@@ -42,4 +42,12 @@ class Song
      @@all.sort_by {|song| song.name}
    end
 
+   def self.new_from_filename(song_file_name)
+   if song_file_name.end_with?(".mp3")
+     song_file_name.split(/[-.]/)
+     @artist_name = song_file_name[0]
+     @name = song_file_name[1]
+   end
+   end
+
 end
