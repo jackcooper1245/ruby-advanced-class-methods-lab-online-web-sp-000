@@ -39,7 +39,7 @@ class Song
    end
 
    def self.alphabetical
-     self.sort_by {|a, b| a <=> b}
+     @@all.sort
    end
 
 end
