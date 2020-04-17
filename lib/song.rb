@@ -43,11 +43,11 @@ class Song
    end
 
    def self.new_from_filename(song_file_name)
-   if song_file_name.end_with?(".mp3")
-     song_file_name.split(/[-.]/)
-     @artist_name = song_file_name[0]
-     @name = song_file_name[1]
-   end
+   song = self.new
+   song.name = (song_file_name.split(" - ")[1].chomp(".mp3"))
+   song.artist_name = (song_file_name.split(" - ")[0])
+   @@all << song
+   song
    end
 
 end
