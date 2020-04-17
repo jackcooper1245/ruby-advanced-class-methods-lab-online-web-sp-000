@@ -53,4 +53,8 @@ class Song
      @@all<< self.new_from_filename(song_file_name)
    end
 
+   def self.destroy_all
+     @@all.clear
+   end
+   
 end
